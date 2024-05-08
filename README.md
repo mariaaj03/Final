@@ -1,3 +1,23 @@
+
+COMS 3102
+
+Created the backend of my midterm keeper app project. Functionality: the data doesn’t go away upon refreshing since I added the backend and database. I also added an edit mode to edit any note.
+
+Technologies: used React, Node, MongDB, Mongoose, Express, Visual Studio Code to carry out project. 
+
+Backend: the backend has a models and routes folder, containing note.js and notes-routes.js respectively. Note.js (models) defines the database schema using Mongoose. It defines the structure of the note object to be stored in the database. Notes-routes.js defines routes for handling create, update, delete operations on notes.
+
+Frontend: Most notably, App.jsx which interacts with the backend to manage the notes. It uses axis for making http requests to the backend.
+
+addNote function: sends a post request to the backend to add a new note and then updates the notes state.
+
+deleteNote: sends a delete request to the backend to delete an existing note
+
+Followed Shivam’s tutorial, a big thank you to the TA’s for helping me with this project!
+
+ https://www.youtube.com/playlist?list=PLCKLPJHmXyU_VXHlXJNoiteyidITvZXMX
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
