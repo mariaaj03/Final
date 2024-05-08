@@ -10,8 +10,18 @@ Backend: the backend has a models and routes folder, containing note.js and note
 Frontend: Most notably, App.jsx which interacts with the backend to manage the notes. It uses axis for making http requests to the backend.
 
 addNote function: sends a post request to the backend to add a new note and then updates the notes state.
+- when the add button is pressed, it sends a post request to the backend server for processing
+- The function then gets a response from the server, and if the server's response is successful the note is added both to the ui and the database
 
 deleteNote: sends a delete request to the backend to delete an existing note
+-  takes the id parameter which specifies exactly which note to be deleted
+-  when the delete button of a note is pressed, it sends a delete request to the backend server for processing
+-  function processes the server's response to the delete function, if successful the given note is deleted from the database and UI
+
+Frontend Connection
+post: - Receives the post request from the App.jsx file, proccesses then if successful, it sends a response to the App.jsx's addNote function (allowing for the note and its contents to be displayed to the user)
+delete: - Receives the delete parameter from the App.jsx file with the id. Since the note to be deleted is also delted from the database, we must check and use the ObjectId function to delete the specified note from the database. If the deletion is successful, it sends a response back to the frontend server which then removes the deleted note from the list and UI.
+
 
 Followed Shivam’s tutorial, a big thank you to the TA’s for helping me with this project!
 
