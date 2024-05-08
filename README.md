@@ -1,5 +1,5 @@
 
-COMS 3102
+# COMS 3102
 
 Created the backend of my midterm keeper app project. Functionality: the data doesn’t go away upon refreshing since I added the backend and database. I also added an edit mode to edit any note.
 
